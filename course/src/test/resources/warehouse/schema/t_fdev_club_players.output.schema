@@ -1,0 +1,88 @@
+{
+  "namespace": "fdev",
+  "name": "t_fdev_club_players",
+  "doc": "Tabla que contiene el historico de clientes dictaminados por el Comite de Comunicacion y Control (CCC).",
+  "database": "master",
+  "storageZone": "MASTERDATA",
+  "storageType": "HDFS-Parquet",
+  "physicalPath": "/data/master/fdev/data/t_smd_club_players",
+  "securityLevel": "L1",
+  "type": "record",
+  "fields": [{
+     "name": "player_id",
+     "type": "int32",
+     "logicalFormat": "NUMERICS SHORT",
+     "deleted": false,
+     "metadata": false,
+     "default": 0
+   }, {
+    "name": "club_team_id",
+    "type": "int32",
+    "logicalFormat": "NUMERIC SHORT",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "locale": "mx"
+  }, {
+    "name": "club_position",
+    "type": ["string", null],
+    "logicalFormat": "ALPHANUMERIC(3)",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "club_jersey_number",
+    "type": ["int32", "null"],
+    "logicalFormat": "NUMERICS SHORT",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "club_loaned_from",
+    "type": ["null","string"],
+    "logicalFormat": "ALPANUMERIC(50)",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "locale": "mx"
+  }, {
+    "name": "club_joined_date",
+    "type": ["date", null],
+    "logicalFormat": "DATE",
+    "deleted": false,
+    "metadata": false,
+    "default": "",
+    "format": "yyyy-MM-ddTHH:mm:ss",
+    "locale": "mx"
+  }, {
+    "name": "club_contract_valid_until_year",
+    "type": ["int32", "null"],
+    "logicalFormat": "NUMERIC SHORT",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "release_clause_eur",
+    "type": ["int32", "null"],
+    "logicalFormat": "NUMERIC SHORT",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name":"fifa_update_date",
+      "type": "date",
+      "logicalFormat": "DATE",
+      "deleted": false,
+      "metadata": false,
+      "default": "",
+      "format": "yyyy-MM-dd",
+      "locale": "es-mx"
+   }, {
+    "name":"fifa_version",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC(2)",
+    "deleted": false,
+    "metadata": true,
+    "default": ""
+  }]
+}
