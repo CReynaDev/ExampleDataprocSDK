@@ -2,18 +2,15 @@ package com.bbva.datioamproduct.fdevdatio.course
 
 import com.bbva.datioamproduct.fdevdatio.course.common.ConfigConstants._
 import com.bbva.datioamproduct.fdevdatio.course.common.ConfigConstants.Inputs._
-import com.bbva.datioamproduct.fdevdatio.course.common.ConfigConstants.Leagues.LigaMx
 import com.bbva.datioamproduct.fdevdatio.course.fields._
 import com.bbva.datioamproduct.fdevdatio.course.utils.{SuperConfig, fieldToColumn}
 import com.bbva.datioamproduct.fdevdatio.course.transformations._
-import com.bbva.datioamproduct.fdevdatio.course.joins._
 import com.datio.dataproc.sdk.api.SparkProcess
 import com.datio.dataproc.sdk.api.context.RuntimeContext
 import com.typesafe.config.Config
 import org.apache.spark.sql._
 import org.slf4j.{Logger, LoggerFactory}
 
-import java.util.Date
 
 class CourseJob extends SparkProcess {
   private val logger:Logger = LoggerFactory.getLogger(this.getClass)
